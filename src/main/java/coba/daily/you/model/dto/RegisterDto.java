@@ -18,6 +18,5 @@ public class RegisterDto {
     @NotBlank
     private String noHp;
     @NotBlank
-    private String ktp;
     private String alamat;
 }

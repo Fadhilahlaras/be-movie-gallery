@@ -1,35 +1,34 @@
 package coba.daily.you.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import coba.daily.you.model.dto.ProductDto;
 import lombok.Data;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name= Product.TABLE_NAME)
+@Table(name= Tvshows.TABLE_NAME)
 @Data
-public class Product {
-    public static final String TABLE_NAME = "t_product";
+public class Tvshows {
+    public static final String TABLE_NAME = "t_tvshows";
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = TABLE_NAME)
-    @SequenceGenerator(name = TABLE_NAME, sequenceName = "t_product_seq")
+    @SequenceGenerator(name = TABLE_NAME, sequenceName = "t_tvshows_seq")
+
     private Integer id;
 
-    private String productName;
+    private String tvshowsName;
 
-    private Integer stock;
+    private String year;
 
-    private Double price;
+    private String description;
 
     private String pictureUrl;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_category", insertable = false, updatable = false)
-    private ProductCategory productCategory;
+    private TvshowsCategory tvshowsCategory;
     @Column(name = "id_category", nullable = false)
     private Integer idCategory;
 

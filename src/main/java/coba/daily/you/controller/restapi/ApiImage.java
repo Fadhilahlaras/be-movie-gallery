@@ -1,18 +1,16 @@
 package coba.daily.you.controller.restapi;
 
 
-import coba.daily.you.model.dto.InputDTO;
+import coba.daily.you.model.dto.InputDto;
 import coba.daily.you.model.entity.Input;
 import coba.daily.you.repository.InputRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.security.RolesAllowed;
-
 
 @RequestMapping("/upload")
-public class ImageAPI {
+public class ApiImage {
 
     @Autowired
     private ModelMapper modelMapper;
@@ -20,8 +18,8 @@ public class ImageAPI {
     @Autowired
     private InputRepository inputRepository;
 
-    private InputDTO mapToDTO(Input input) {
-        InputDTO inputDTO = modelMapper.map(input, InputDTO.class);
+    private InputDto mapToDTO(Input input) {
+        InputDto inputDTO = modelMapper.map(input, InputDto.class);
         return inputDTO;
     }
 }

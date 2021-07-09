@@ -118,7 +118,6 @@ public class KeyCloakWebClient {
         Map<String, List<String>> attributes = new HashMap<>();
         attributes.put("alamat", Arrays.asList(registerDto.getAlamat()));
         attributes.put("noHp", Arrays.asList(registerDto.getNoHp()));
-        attributes.put("ktp", Arrays.asList(registerDto.getKtp()));
         user.setAttributes(attributes);
         user.setCredentials(Arrays.asList(credential));
 

@@ -13,7 +13,6 @@ public class UserMapper {
         user.setEmail(dto.getEmail());
         user.setUsername(dto.getUsername());
         user.setNoHp(dto.getNoHp());
-        user.setKtp(dto.getKtp());
         user.setAlamat(dto.getAlamat());
 
         return user;
@@ -24,7 +23,6 @@ public class UserMapper {
         registerDto.setEmail(user.getEmail());
         registerDto.setUsername(user.getUsername());
         registerDto.setNoHp(user.getNoHp());
-        registerDto.setKtp(user.getKtp());
         registerDto.setAlamat(user.getAlamat());
         return registerDto;
     }
@@ -35,7 +33,6 @@ public class UserMapper {
         userDto.setUsername(user.getUsername());
         userDto.setNoHp(user.getNoHp());
         userDto.setUserKeyId(user.getUserKeyId());
-        userDto.setKtp(user.getKtp());
         userDto.setAlamat(user.getAlamat());
         return userDto;
     }

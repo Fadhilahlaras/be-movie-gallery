@@ -3,7 +3,7 @@ package coba.daily.you.model.dto;
 import lombok.Data;
 
 @Data
-public class InputDTO {
+public class InputDto {
     private Integer id;
     private String name;
     private String pbirth;

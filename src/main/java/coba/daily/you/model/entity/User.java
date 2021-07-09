@@ -21,8 +21,6 @@ public class User extends CommonModel {
     private String noHp;
     @Column(name = "userkeyid", unique = true)
     private String userKeyId;
-    @Column(name = "usrktp", unique = true)
-    private String ktp;
     @Column(name = "usralamat")
     private String alamat;
 }
